@@ -12,10 +12,10 @@ Następujące słowa "MUSI", "NIE WOLNO", "WYMAGANE", "POWINNO", "NIE POWINNO", 
 [PSR-4]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md
 
 
-1. Overview
+1. Podsumowanie
 -----------
 
-- Pliki z kodem php MUSZĄ korzystać z tagów `<?php` i `<?=`
+- Pliki z kodem php MUSZĄ korzystać z tagów `<?php` i `<?=`.
 
 - Pliki MUSZĄ korzystać z kodowania UTF-8 bez BOM.
 
@@ -28,7 +28,7 @@ Następujące słowa "MUSI", "NIE WOLNO", "WYMAGANE", "POWINNO", "NIE POWINNO", 
 - Nazwy klas MUSZĄ być zapisywane w notacji `UpperCamelCase`.
 
 - Stałe w klasach muszą być deklarowane wielkimi literami, ze znakiem podkreślenia 
- (underscore) używanym jako separator.
+ (`_`) używanym jako separator.
 
 - Nazwy metod muszą być tworzone w notacji `camelCase`.
 
@@ -125,7 +125,7 @@ class Foo
 ```
 
 Kod napisany dla wersji PHP 5.2.x oraz niższych, 
-POWINIEN używać pseudo-namespace’owych konwencji prefiksów (np. Vendor_ ) dla nazw klas.
+POWINIEN używać pseudo-namespace’owych konwencji prefiksów (np. `Vendor_` ) dla nazw klas.
 
 ```php
 <?php
@@ -161,6 +161,7 @@ class Foo
 
 Powyższy przewodnik celowo nie rekomenduje żadnych standardów dotyczących nazewnictwa właściwości 
 klas (np. `$camelCase`, `$UpperCamelCase` czy `$znak_podkreslenia`).
+
 Jakakolwiek forma nazewnictwa właściwości jest używana – POWINNA być stosowana 
 konsekwentnie w rozsądnym obszarze kodu. Obszar ten może zostać określony na poziomie 
 vendora, paczki, klasy czy metody.
@@ -168,4 +169,3 @@ vendora, paczki, klasy czy metody.
 ### 4.3. Metody
 
 Nazwy metod MUSZĄ być deklarowane w notacji `camelCase()`.
-
