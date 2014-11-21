@@ -12,49 +12,49 @@ członków PHP-FIG.  Kiedy różni autorzy współpracują w ramach kilku projek
 wytycznych używany we wszystkich tych projektach jest bardzo pomocny. Dlatego też, główną korzyścią tego
 poradnika nie są zasady same w sobie, lecz dzielenie się nimi.
 
-Następujące słowa „MUSI”, „NIE WOLNO”, „WYMAGANE”, „POWINNO”, „NIE POWINNO”, „REKOMENDWANE”, „MOŻE” oraz
-„OPCJONALNE” powinny być interpretowane tak jak opisano to w [RFC 2119].
+Następujące słowa "MUSI", "NIE WOLNO", "WYMAGANE", "POWINNO", "NIE POWINNO", "REKOMENDWANE", "MOŻE" oraz
+"OPCJONALNE" powinny być interpretowane tak jak opisano to w [RFC 2119].
 
 [RFC 2119]: http://www.ietf.org/rfc/rfc2119.txt
 [PSR-0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
 [PSR-1]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md
 
 
-1. Overview
+1. Podsumowanie
 -----------
 
-- Code MUST follow a "coding style guide" PSR [[PSR-1]].
+- Kod php MUSI stosować się do zasad podstawowych standardów kodowania PSR [[PSR-1]].
 
-- Code MUST use 4 spaces for indenting, not tabs.
+- Kod MUSI używać 4 spacji jako wcięcie, a nie znaków tabulacji.
 
-- There MUST NOT be a hard limit on line length; the soft limit MUST be 120
-  characters; lines SHOULD be 80 characters or less.
+- Linia POWINNA mieć 80 znaków lub mniej, jeśli chcemy używać limitu na liczbę znaków w linii
+MUSI być to 120 znaków, NIE WOLNO ustalać sztywnych limitów na długość linii.
 
-- There MUST be one blank line after the `namespace` declaration, and there
-  MUST be one blank line after the block of `use` declarations.
+- Po deklaracji `namespace` MUSI istnieć jedna linia odstępu, to samo tyczy się sytuacji,
+kiedy mamy blok deklaracji `use`.
 
-- Opening braces for classes MUST go on the next line, and closing braces MUST
-  go on the next line after the body.
+- Otwierający nawias klamrowy dla klas MUSI rozpoczynać się od nowej linii, a zamykający
+MUSI znajdować się jedną linię poniżej kodu ciała klasy.
 
-- Opening braces for methods MUST go on the next line, and closing braces MUST
-  go on the next line after the body.
+- Otwierający nawias klamrowy dla metod MUSI rozpoczynać się od nowej linii, a zamykający
+MUSI znajdować się jedną linię poniżej kodu ciała metody.
 
-- Visibility MUST be declared on all properties and methods; `abstract` and
-  `final` MUST be declared before the visibility; `static` MUST be declared
-  after the visibility.
+- Widoczność MUSI być deklarowana dla wszystkich właściwości i metod; deklaracje 
+`abstract` i `final` MUSZĄ znajdować się przed widocznością, deklaracja 
+`static` MUSI znajdować się po widoczności.
   
-- Control structure keywords MUST have one space after them; method and
-  function calls MUST NOT.
+- Słowa kluczowe definiujące instrukcje sterujące MUSZĄ posiadać jedną spację po ich deklaracji, 
+NIE WOLNO stosować tej przerwy dla wywołań metod i funkcji.
 
-- Opening braces for control structures MUST go on the same line, and closing
-  braces MUST go on the next line after the body.
+- Otwierający nawias klamrowy dla instrukcji sterujących MUSI rozpoczynać się od tej samej linii,
+a zamykający MUSI znajdować się jedną linię poniżej kodu ciała instrukcji sterującej.
 
-- Opening parentheses for control structures MUST NOT have a space after them,
-  and closing parentheses for control structures MUST NOT have a space before.
+- NIE WOLNO dodawać żadnej spacji po nawiasie otwierającym instrukcji sterującej,
+NIE WOLNO dodawać żadnej spacji przed nawiasem zamykającym instrukcji sterującej.
 
-### 1.1. Example
+### 1.1. Przykład
 
-This example encompasses some of the rules below as a quick overview:
+Poniższy przykład zawiera w sobie niektóre zasady opisane powyżej:
 
 ```php
 <?php
@@ -79,75 +79,75 @@ class Foo extends Bar implements FooInterface
 
     final public static function bar()
     {
-        // method body
+        // ciało metody
     }
 }
 ```
 
-2. General
+2. Zasady ogólne
 ----------
 
-### 2.1 Basic Coding Standard
+### 2.1 Podstawowe standardy programowania
 
-Code MUST follow all rules outlined in [PSR-1].
+Kod php MUSI stosować się do zasad podstawowych standardów programowania [PSR-1].
 
 ### 2.2 Files
 
-All PHP files MUST use the Unix LF (linefeed) line ending.
+Wszystkie pliki php MUSZĄ używać unixowego kodu końca linii - LF (linefeed).
 
-All PHP files MUST end with a single blank line.
+Wszystkie pliki php MUSZĄ kończyć się jedną pustą linią.
 
-The closing `?>` tag MUST be omitted from files containing only PHP.
+Tag zamykający `?>` MUSI zostać pominięty w plikach zawierających tylko kod php.
 
-### 2.3. Lines
+### 2.3. Linie
 
-There MUST NOT be a hard limit on line length.
+NIE WOLNO ustalać sztywnych limitów na długość linii.
 
-The soft limit on line length MUST be 120 characters; automated style checkers
-MUST warn but MUST NOT error at the soft limit.
+"Miękki" limit na liczbę znaków w linii MUSI być równy 120 znaków, narzędzie do sprawdzania
+stylów MUSI wyświetlić wtedy ostrzeżenie o przekroczeniu "miękkiego limitu", jednakże 
+NIE WOLNO mu wyświetlić błędu.
 
-Lines SHOULD NOT be longer than 80 characters; lines longer than that SHOULD
-be split into multiple subsequent lines of no more than 80 characters each.
+Linia NIE POWINNA być dłuższa niż 80 znaków, linie przekraczające tą wielkość POWINNY być 
+rozbite na pomniejsze linie nieprzekraczające 80 znaków.
 
-There MUST NOT be trailing whitespace at the end of non-blank lines.
+NIE WOLNO dodawać spacji na końcu niepustej linii.
 
-Blank lines MAY be added to improve readability and to indicate related
-blocks of code.
+Puste linie MOGĄ być dodawane, aby zwiększyć czytelność i uwidocznić 
+powiązane ze sobą bloki kodu.
 
-There MUST NOT be more than one statement per line.
+NIE WOLNO używać więcej niż jednego wyrażenia na linię.
 
-### 2.4. Indenting
+### 2.4. Wcięcia
 
-Code MUST use an indent of 4 spaces, and MUST NOT use tabs for indenting.
+Kod php MUSI używać 4 spacji jako wcięcie, NIE WOLNO używać znaków tabulacji do wcięć.
 
-> N.b.: Using only spaces, and not mixing spaces with tabs, helps to avoid
-> problems with diffs, patches, history, and annotations. The use of spaces
-> also makes it easy to insert fine-grained sub-indentation for inter-line 
-> alignment.
+> Notabene: Używanie tylko spacji oraz nie mieszanie tego podejścia ze znakami tabulacji, pomaga uniknąć
+> problemów z porównywaniem plików, patche’ami, historią oraz adnotacjami. Używanie spacji pozwala w łatwy 
+> sposób dodawać niewielkie wcięcia dla dodatkowego wyrównania w linii.
 
-### 2.5. Keywords and True/False/Null
+### 2.5. Znaki specjalne oraz True/False/Null
 
-PHP [keywords] MUST be in lower case.
+[Znaki specjalne] w php MUSZĄ być zapisywane małymi literami.
 
-The PHP constants `true`, `false`, and `null` MUST be in lower case.
+Stałe php `true`, `false` i `null` MUSZĄ także być zapisywane małymi literami.
 
-[keywords]: http://php.net/manual/en/reserved.keywords.php
-
+[Znaki specjalne]: http://php.net/manual/en/reserved.keywords.php
 
 
-3. Namespace and Use Declarations
+
+3. Przestrzenie nazw i deklaracja Use
 ---------------------------------
 
-When present, there MUST be one blank line after the `namespace` declaration.
+Kiedy używamy deklaracji `namespace`, MUSI występować po niej jedna pusta linia.
 
-When present, all `use` declarations MUST go after the `namespace`
-declaration.
+Kiedy używamy deklaracji `use`, wszystkie deklaracje `use`
+MUSZĄ występować po deklaracji `namespace`.
 
-There MUST be one `use` keyword per declaration.
+Znak specjalny `use` MUSI być używany dla każdej deklaracji z osobna.
 
-There MUST be one blank line after the `use` block.
+Po bloku deklaracji `use`, MUSI występować jedna pusta linia.
 
-For example:
+Na przykład:
 
 ```php
 <?php
@@ -157,23 +157,22 @@ use FooClass;
 use BarClass as Bar;
 use OtherVendor\OtherPackage\BazClass;
 
-// ... additional PHP code ...
+// ... dodatkowy kod php ...
 
 ```
 
 
-4. Classes, Properties, and Methods
+4. Klasy, właściwości i metody
 -----------------------------------
 
-The term "class" refers to all classes, interfaces, and traits.
+Termin "klasa" odnosi się poniżej do wszystkich klas, interfejsów i traitów.
 
-### 4.1. Extends and Implements
+### 4.1. Rozszerzanie i implementacja
 
-The `extends` and `implements` keywords MUST be declared on the same line as
-the class name.
+Słowa kluczowe `extends` i `implements` MUSZĄ być deklarowane w tej samej linii, co nazwa klasy.
 
-The opening brace for the class MUST go on its own line; the closing brace
-for the class MUST go on the next line after the body.
+Otwierający nawias klamrowy klasy MUSI znajdować się w nowej linii, zamykający nawias klamrowy 
+MUSI znajdować się jedną linię poniżej kodu ciała klasy.
 
 ```php
 <?php
@@ -185,13 +184,13 @@ use OtherVendor\OtherPackage\BazClass;
 
 class ClassName extends ParentClass implements \ArrayAccess, \Countable
 {
-    // constants, properties, methods
+    // stałe, właściwości, metody
 }
 ```
 
-Lists of `implements` MAY be split across multiple lines, where each
-subsequent line is indented once. When doing so, the first item in the list
-MUST be on the next line, and there MUST be only one interface per line.
+Lista implementowanych interfejsów MOŻE być rozbita na pojedyncze linie, 
+gdzie każda linia posiada jedno wcięcie. Kiedy używamy tego podejścia, 
+każdy implementowany interfejs MUSI znajdować się w nowej linii.
 
 ```php
 <?php
@@ -206,22 +205,22 @@ class ClassName extends ParentClass implements
     \Countable,
     \Serializable
 {
-    // constants, properties, methods
+    // stałe, właściwości, metody
 }
 ```
 
-### 4.2. Properties
+### 4.2. Właściwości
 
-Visibility MUST be declared on all properties.
+Widoczność MUSI być deklarowana dla wszystkich właściwości.
 
-The `var` keyword MUST NOT be used to declare a property.
+NIE WOLNO używać słowa kluczowego `var` przy deklaracji właściwości.
 
-There MUST NOT be more than one property declared per statement.
+NIE WOLNO deklarować więcej niż jednej właściwości na wyrażenie.
 
-Property names SHOULD NOT be prefixed with a single underscore to indicate
-protected or private visibility.
+Nazwa właściwości NIE POWINNA rozpoczynać się od znaku podkreślenia, 
+aby zaznaczyć chronioną lub prywatną widoczność.
 
-A property declaration looks like the following.
+Deklaracja właściwości wygląda tak jak w poniższym przykładzie.
 
 ```php
 <?php
@@ -233,20 +232,19 @@ class ClassName
 }
 ```
 
-### 4.3. Methods
+### 4.3. Metody
 
-Visibility MUST be declared on all methods.
+Widoczność MUSI być deklarowana dla wszystkich metod.
 
-Method names SHOULD NOT be prefixed with a single underscore to indicate
-protected or private visibility.
+Nazwa metody NIE POWINNA rozpoczynać się od znaku podkreślenia, 
+aby zaznaczyć chronioną lub prywatną widoczność.
 
-Method names MUST NOT be declared with a space after the method name. The
-opening brace MUST go on its own line, and the closing brace MUST go on the
-next line following the body. There MUST NOT be a space after the opening
-parenthesis, and there MUST NOT be a space before the closing parenthesis.
+NIE WOLNO deklarować metod ze spacją po nazwie metody. Otwierający nawias klamrowy 
+metody MUSI znajdować się w nowej linii, zamykający nawias klamrowy MUSI znajdować się 
+jedną linię poniżej kodu ciała metody. NIE WOLNO dodawać żadnej spacji po nawiasie otwierającym 
+metody, NIE WOLNO dodawać żadnej spacji przed nawiasem zamykającym metody.
 
-A method declaration looks like the following. Note the placement of
-parentheses, commas, spaces, and braces:
+Deklaracja metody wygląda tak jak w poniższym przykładzie. Należy zapamiętać miejsce nawiasów, przecinków, spacji oraz nawiasów klamrowych.
 
 ```php
 <?php
@@ -256,18 +254,18 @@ class ClassName
 {
     public function fooBarBaz($arg1, &$arg2, $arg3 = [])
     {
-        // method body
+        // ciało metody
     }
 }
 ```    
 
-### 4.4. Method Arguments
+### 4.4. Argumenty metod
 
-In the argument list, there MUST NOT be a space before each comma, and there
-MUST be one space after each comma.
+NIE WOLNO dodawać spacji przed przecinkami w liście argumentów, 
+po każdym przecinku MUSI znajdować się jeden znak spacji.
 
-Method arguments with default values MUST go at the end of the argument
-list.
+Argumenty metody z domyślną wartością MUSZĄ znajdować się na końcu 
+listy argumentów.
 
 ```php
 <?php
@@ -277,18 +275,16 @@ class ClassName
 {
     public function foo($arg1, &$arg2, $arg3 = [])
     {
-        // method body
+        // ciało metody
     }
 }
 ```
 
-Argument lists MAY be split across multiple lines, where each subsequent line
-is indented once. When doing so, the first item in the list MUST be on the
-next line, and there MUST be only one argument per line.
+Lista argumentów MOŻE być rozdzielona na kilka linii, gdzie każda nowa linia 
+posiada pojedyncze wcięcie. Kiedy używamy wielu linii do prezentacji argumentów, 
+każdy z argumentów MUSI znajdować się w osobnej linii.
 
-When the argument list is split across multiple lines, the closing parenthesis
-and opening brace MUST be placed together on their own line with one space
-between them.
+Jeżeli używamy wieloliniowych argumentów, nawias zamykający oraz nawias klamrowy otwierający metody MUSZĄ znajdować się w jednej linii, ze znakiem spacji pomiędzy nimi.
 
 ```php
 <?php
@@ -301,18 +297,18 @@ class ClassName
         &$arg2,
         array $arg3 = []
     ) {
-        // method body
+        // ciało metody
     }
 }
 ```
 
-### 4.5. `abstract`, `final`, and `static`
+### 4.5. `abstract`, `final` i `static`
 
-When present, the `abstract` and `final` declarations MUST precede the
-visibility declaration.
+Kiedy używamy słów kluczowych `abstract` lub `final`, ich deklaracje MUSZĄ 
+znajdować się przed deklaracjami widoczności.
 
-When present, the `static` declaration MUST come after the visibility
-declaration.
+Kiedy używamy słowa kluczowego `static`, jego deklaracja MUSI znajdować 
+się zawsze za deklaracją widoczności.
 
 ```php
 <?php
@@ -326,18 +322,18 @@ abstract class ClassName
 
     final public static function bar()
     {
-        // method body
+        // ciało metody
     }
 }
 ```
 
-### 4.6. Method and Function Calls
+### 4.6. Wywołania metod i funkcji
 
-When making a method or function call, there MUST NOT be a space between the
-method or function name and the opening parenthesis, there MUST NOT be a space
-after the opening parenthesis, and there MUST NOT be a space before the
-closing parenthesis. In the argument list, there MUST NOT be a space before
-each comma, and there MUST be one space after each comma.
+Kiedy wywołujemy metodę lub funkcję, NIE WOLNO dodawać spacji między nazwą metody 
+a nawiasem otwierającym. NIE WOLNO dodawać znaku spacji po nawiasie otwierającym, 
+podobnie dla nawiasu zamykającego – NIE WOLNO dodawać przed nim znaku spacji. 
+NIE WOLNO dodawać spacji przed przecinkami w liście argumentów, po każdym przecinku 
+MUSI znajdować się jeden znak spacji.
 
 ```php
 <?php
@@ -346,9 +342,9 @@ $foo->bar($arg1);
 Foo::bar($arg2, $arg3);
 ```
 
-Argument lists MAY be split across multiple lines, where each subsequent line
-is indented once. When doing so, the first item in the list MUST be on the
-next line, and there MUST be only one argument per line.
+Lista argumentów MOŻE być rozdzielona na kilka linii, gdzie każda nowa linia 
+posiada pojedyncze wcięcie. Kiedy używamy wielu linii do prezentacji argumentów, 
+każdy z argumentów MUSI znajdować się w osobnej linii.
 
 ```php
 <?php
@@ -359,52 +355,52 @@ $foo->bar(
 );
 ```
 
-5. Control Structures
+5. Instrukcje sterujące
 ---------------------
 
-The general style rules for control structures are as follows:
+Ogólne zasady stylowania instrukcji sterujących:
 
-- There MUST be one space after the control structure keyword
-- There MUST NOT be a space after the opening parenthesis
-- There MUST NOT be a space before the closing parenthesis
-- There MUST be one space between the closing parenthesis and the opening
-  brace
-- The structure body MUST be indented once
-- The closing brace MUST be on the next line after the body
+- Po słowie kluczowym instrukcji sterującej MUSI znajdować się jeden znak spacji
+- NIE WOLNO dodawać znaku spacji po nawiasie otwierającym
+- NIE WOLNO dodawać znaku spacji przed nawiasem zamykającym
+- Pomiędzy nawiasem zamykającym a nawiasem klamrowym otwierającym, MUSI znajdować 
+się jeden znak spacji
+- Ciało instrukcji sterującej POWINNO posiadać jedno wcięcie
+- Zamykający nawias klamrowy MUSI znajdować się jedną linię poniżej ciała instrukcji sterującej
 
-The body of each structure MUST be enclosed by braces. This standardizes how
-the structures look, and reduces the likelihood of introducing errors as new
-lines get added to the body.
+Ciało każdej instrukcji sterującej MUSI być otoczone nawiasami klamrowymi. 
+Ta zasada nadaje jedną formę strukturom oraz zmniejsza prawdopodobieństwo błędów 
+wynikających z niepoprawnego dodania kodu do ciała instrukcji.
 
 
 ### 5.1. `if`, `elseif`, `else`
 
-An `if` structure looks like the following. Note the placement of parentheses,
-spaces, and braces; and that `else` and `elseif` are on the same line as the
-closing brace from the earlier body.
+Instrukcja `if` wygląda jak w przykładzie poniżej. Zapamiętaj pozycję nawiasów, 
+spacji oraz nawiasów klamrowych oraz to, że `else` oraz `elseif` znajdują się w 
+tej samej linii co zamykający nawias klamrowy poprzedniego ciała instrukcji.
 
 ```php
 <?php
 if ($expr1) {
-    // if body
+    // ciało if
 } elseif ($expr2) {
-    // elseif body
+    // ciało elseif
 } else {
-    // else body;
+    // ciało else
 }
 ```
-
-The keyword `elseif` SHOULD be used instead of `else if` so that all control
-keywords look like single words.
+Słowo kluczowe `elseif` POWINNO być używane zamiast `else if`, tak aby wszystkie 
+słowa kluczowe instrukcji sterujących składały się z jednej frazy.
 
 
 ### 5.2. `switch`, `case`
 
-A `switch` structure looks like the following. Note the placement of
-parentheses, spaces, and braces. The `case` statement MUST be indented once
-from `switch`, and the `break` keyword (or other terminating keyword) MUST be
-indented at the same level as the `case` body. There MUST be a comment such as
-`// no break` when fall-through is intentional in a non-empty `case` body.
+Instrukcja `switch` wygląda jak w przykładzie poniżej. Zapamiętaj pozycję nawiasów, 
+spacji oraz nawiasów klamrowych. Wyrażenie `case` MUSI posiadać jedno wcięcie w 
+odniesieniu do instrukcji `switch`. Słowo kluczowe `break` (lub inne słowo kluczowe 
+kończące działanie switch’a) MUSI posiadać wcięcie na tym samym poziomie co ciało 
+wyrażenia `case`. Jeśli intencją programisty jest wywołanie kolejnych case’ów po nie 
+pustym wyrażeniu `case` – MUSI zostać dodany komentarz taki jak np. `// no break`. 
 
 ```php
 <?php
@@ -429,110 +425,110 @@ switch ($expr) {
 
 ### 5.3. `while`, `do while`
 
-A `while` statement looks like the following. Note the placement of
-parentheses, spaces, and braces.
+Pętla `while` wygląda jak w przykładzie poniżej. 
+Zapamiętaj pozycję nawiasów, spacji oraz nawiasów klamrowych.
 
 ```php
 <?php
 while ($expr) {
-    // structure body
+    // ciało struktury
 }
 ```
 
-Similarly, a `do while` statement looks like the following. Note the placement
-of parentheses, spaces, and braces.
+Analogicznie, pętla `do while` wygląda jak w przykładzie poniżej. 
+Zapamiętaj pozycję nawiasów, spacji oraz nawiasów klamrowych.
 
 ```php
 <?php
 do {
-    // structure body;
+    // ciało struktury
 } while ($expr);
 ```
 
 ### 5.4. `for`
 
-A `for` statement looks like the following. Note the placement of parentheses,
-spaces, and braces.
+Pętla `for` wygląda jak w przykładzie poniżej. Zapamiętaj pozycję nawiasów, 
+spacji oraz nawiasów klamrowych.
 
 ```php
 <?php
 for ($i = 0; $i < 10; $i++) {
-    // for body
+    // ciało pętli for
 }
 ```
 
 ### 5.5. `foreach`
     
-A `foreach` statement looks like the following. Note the placement of
-parentheses, spaces, and braces.
+Pętla `foreach` wygląda jak w przykładzie poniżej. Zapamiętaj pozycję nawiasów, 
+spacji oraz nawiasów klamrowych.
 
 ```php
 <?php
 foreach ($iterable as $key => $value) {
-    // foreach body
+    // ciało pętli foreach
 }
 ```
 
 ### 5.6. `try`, `catch`
 
-A `try catch` block looks like the following. Note the placement of
-parentheses, spaces, and braces.
+Blok `try catch` wygląda jak w przykładzie poniżej. Zapamiętaj pozycję 
+nawiasów, spacji oraz nawiasów klamrowych.
 
 ```php
 <?php
 try {
-    // try body
+    // ciało bloku try
 } catch (FirstExceptionType $e) {
-    // catch body
+    // ciało bloku catch
 } catch (OtherExceptionType $e) {
-    // catch body
+    // ciało bloku catch
 }
 ```
 
-6. Closures
+6. Funkcje anonimowe
 -----------
 
-Closures MUST be declared with a space after the `function` keyword, and a
-space before and after the `use` keyword.
+Funkcje anonimowe MUSZĄ być deklarowane ze znakiem spacji po słowie 
+kluczowym `function`, oraz ze spacją przed i po słowie kluczowym `use`.
 
-The opening brace MUST go on the same line, and the closing brace MUST go on
-the next line following the body.
+Otwierający nawias klamrowy MUSI znajdować się w tej samej linii, 
+a zamykający nawias klamrowy MUSI znajdować się w następnej linii za ciałem funkcji.
 
-There MUST NOT be a space after the opening parenthesis of the argument list
-or variable list, and there MUST NOT be a space before the closing parenthesis
-of the argument list or variable list.
+NIE WOLNO dodawać znaku spacji po nawiasie otwierającym listy argumentów i 
+listy zmiennych oraz NIE WOLNO dodawać znaku spacji przed nawiasem zamykającym 
+listy argumentów i listy zmiennych.
 
-In the argument list and variable list, there MUST NOT be a space before each
-comma, and there MUST be one space after each comma.
+NIE WOLNO dodawać znaku spacji przed przecinkami w listach argumentów i 
+listach zmiennych, natomiast po każdym  przecinku MUSI znajdować się jeden znak spacji.
 
-Closure arguments with default values MUST go at the end of the argument
-list.
+Argumenty funkcji anonimowej posiadające domyślne właściwości MUSZĄ znajdować się 
+na końcu listy argumentów.
 
-A closure declaration looks like the following. Note the placement of
-parentheses, commas, spaces, and braces:
+Funkcje anonimowe wyglądają jak w przykładzie poniżej. Zapamiętaj pozycję nawiasów, 
+przecinków, spacji oraz nawiasów klamrowych:
 
 ```php
 <?php
 $closureWithArgs = function ($arg1, $arg2) {
-    // body
+    // ciało
 };
 
 $closureWithArgsAndVars = function ($arg1, $arg2) use ($var1, $var2) {
-    // body
+    // ciało
 };
 ```
 
-Argument lists and variable lists MAY be split across multiple lines, where
-each subsequent line is indented once. When doing so, the first item in the
-list MUST be on the next line, and there MUST be only one argument or variable
-per line.
+Lista argumentów i lista zmiennych MOŻE być rozdzielona na kilka linii, gdzie 
+każda nowa linia posiada pojedyncze wcięcie. Kiedy używamy wielu linii do 
+prezentacji argumentów lub zmiennych, każdy z argumentów lub każda ze 
+zmiennych MUSZĄ znajdować się w osobnej linii.
 
-When the ending list (whether or arguments or variables) is split across
-multiple lines, the closing parenthesis and opening brace MUST be placed
-together on their own line with one space between them.
+Jeśli ostatnia lista (niezależnie czy jest to lista argumentów czy wartości) 
+jest rozdzielona na kilka linii, nawias zamykający i nawias klamrowy 
+otwierający MUSZĄ znajdować się razem w nowej linii ze znakiem spacji między nimi.
 
-The following are examples of closures with and without argument lists and
-variable lists split across multiple lines.
+Poniżej kilka przykładów wieloliniowych funkcji anonimowych, 
+wykorzystujących lub nie listy argumentów i listy zmiennych.
 
 ```php
 <?php
@@ -541,7 +537,7 @@ $longArgs_noVars = function (
     $longerArgument,
     $muchLongerArgument
 ) {
-   // body
+   // ciało
 };
 
 $noArgs_longVars = function () use (
@@ -549,7 +545,7 @@ $noArgs_longVars = function () use (
     $longerVar2,
     $muchLongerVar3
 ) {
-   // body
+   // ciało
 };
 
 $longArgs_longVars = function (
@@ -561,7 +557,7 @@ $longArgs_longVars = function (
     $longerVar2,
     $muchLongerVar3
 ) {
-   // body
+   // ciało
 };
 
 $longArgs_shortVars = function (
@@ -569,7 +565,7 @@ $longArgs_shortVars = function (
     $longerArgument,
     $muchLongerArgument
 ) use ($var1) {
-   // body
+   // ciało
 };
 
 $shortArgs_longVars = function ($arg) use (
@@ -577,56 +573,55 @@ $shortArgs_longVars = function ($arg) use (
     $longerVar2,
     $muchLongerVar3
 ) {
-   // body
+   // ciało
 };
 ```
 
-Note that the formatting rules also apply when the closure is used directly
-in a function or method call as an argument.
+Zapamiętaj, że zasady formatowania obowiązują także wtedy, 
+jeśli funkcja anonimowa użyta jest jako argument w wywołaniu funkcji lub metody. 
 
 ```php
 <?php
 $foo->bar(
     $arg1,
     function ($arg2) use ($var1) {
-        // body
+        // ciało
     },
     $arg3
 );
 ```
 
 
-7. Conclusion
+7. Wnioski
 --------------
 
-There are many elements of style and practice intentionally omitted by this
-guide. These include but are not limited to:
+Istnieje wiele rodzajów stylów i praktyk celowo pominiętych w powyższym przewodniku. 
+Mowa tutaj m.in. o:
 
-- Declaration of global variables and global constants
+- Deklaracjach zmiennych globalnych i stałych globalnych
 
-- Declaration of functions
+- Deklaracjach funkcji
 
-- Operators and assignment
+- Operatorach i znakach przypisania
 
-- Inter-line alignment
+- Wyrównaniach w linii
 
-- Comments and documentation blocks
+- Komentarzach i blokach dokumentacji
 
-- Class name prefixes and suffixes
+- Przedrostkach i przyrostkach w nazwach klas
 
-- Best practices
+- Najlepszych praktykach
 
-Future recommendations MAY revise and extend this guide to address those or
-other elements of style and practice.
+Przyszłe rekomendacje MOGĄ poprawić i rozszerzyć ten przewodnik o nowe pozycje – 
+także o takie, które nie zostały opisane w powyższej liście.
 
 
-Appendix A. Survey
+Dodatek A. Ankieta
 ------------------
 
-In writing this style guide, the group took a survey of member projects to
-determine common practices.  The survey is retained herein for posterity.
+Podczas pisania tego poradnika, grupa PHP-FIG utworzyła ankietę, pomocną w określeniu popularnych praktyk wśród członków grupy. Wyniki ankiety zostały opublikowane poniżej dla przyszłych pokoleń.
 
-### A.1. Survey Data
+### A.1. Dane ankiety
 
     url,http://www.horde.org/apps/horde/docs/CODING_STANDARDS,http://pear.php.net/manual/en/standards.php,http://solarphp.com/manual/appendix-standards.style,http://framework.zend.com/manual/en/coding-standard.html,http://symfony.com/doc/2.0/contributing/code/standards.html,http://www.ppi.io/docs/coding-standards.html,https://github.com/ezsystems/ezp-next/wiki/codingstandards,http://book.cakephp.org/2.0/en/contributing/cakephp-coding-conventions.html,https://github.com/UnionOfRAD/lithium/wiki/Spec%3A-Coding,http://drupal.org/coding-standards,http://code.google.com/p/sabredav/,http://area51.phpbb.com/docs/31x/coding-guidelines.html,https://docs.google.com/a/zikula.org/document/edit?authkey=CPCU0Us&hgd=1&id=1fcqb93Sn-hR9c0mkN6m_tyWnmEvoswKBtSc0tKkZmJA,http://www.chisimba.com,n/a,https://github.com/Respect/project-info/blob/master/coding-standards-sample.php,n/a,Object Calisthenics for PHP,http://doc.nette.org/en/coding-standard,http://flow3.typo3.org,https://github.com/propelorm/Propel2/wiki/Coding-Standards,http://developer.joomla.org/coding-standards.html
     voting,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,no,no,no,?,yes,no,yes
@@ -652,72 +647,78 @@ determine common practices.  The survey is retained herein for posterity.
     blank_line_after_php,no,no,no,no,yes,no,no,no,no,yes,yes,no,no,yes,?,yes,yes,no,yes,no,yes,no
     class_method_control_brace,next/next/same,next/next/same,next/next/same,next/next/same,next/next/same,same/same/same,next/next/next,same/same/same,same/same/same,same/same/same,same/same/same,next/next/next,next/next/same,next/same/same,next/next/next,next/next/same,next/next/same,next/next/same,next/next/same,same/same/same,next/next/same,next/next/next
 
-### A.2. Survey Legend
+### A.2. Legenda ankiety
 
 `indent_type`:
-The type of indenting. `tab` = "Use a tab", `2` or `4` = "number of spaces"
+Typ wcięcia. `tab` = "Użycie tabulatora", `2` lub `4` = "liczba spacji".
 
 `line_length_limit_soft`:
-The "soft" line length limit, in characters. `?` = not discernible or no response, `no` means no limit.
+"Miękki" limit długości linii, w znakach. `?` – nieczytelne lub brak odpowiedzi , `no` – brak limitu.
 
 `line_length_limit_hard`:
-The "hard" line length limit, in characters. `?` = not discernible or no response, `no` means no limit.
+Sztywny limit długości linii, w znakach. `?` – nieczytelne lub brak odpowiedzi , `no` – brak limitu.
 
 `class_names`:
-How classes are named. `lower` = lowercase only, `lower_under` = lowercase with underscore separators, `studly` = StudlyCase.
+Z jakich liter zbudowana jest nazwa klasy. `lower` = tylko małe, `lower_under` = małe litery 
+ze znakiem podkreślenia jako separator, `studly` = UpperCamelCase.
 
 `class_brace_line`:
-Does the opening brace for a class go on the `same` line as the class keyword, or on the `next` line after it?
+Czy otwierający nawias klamrowy klasy znajduje się w tej samej (`same`) czy nowej linii (`next`), 
+co słowo kluczowe class.
 
 `constant_names`:
-How are class constants named? `upper` = Uppercase with underscore separators.
+Z jakich liter zbudowane są stale klasy? `upper` – wielkie litery ze znakiem podkreślenia, jako separator.
 
 `true_false_null`:
-Are the `true`, `false`, and `null` keywords spelled as all `lower` case, or all `upper` case?
+Słowa kluczowe `true`, `false`, i `null` są zapisywane małymi czy dużymi literami?
 
 `method_names`:
-How are methods named? `camel` = `camelCase`, `lower_under` = lowercase with underscore separators.
+Jak formatowane są nazwy metod? `camel` = camelCase, `lower_under` = małe litery ze znakiem 
+pokreślenia jako separator.
 
 `method_brace_line`:
-Does the opening brace for a method go on the `same` line as the method name, or on the `next` line?
+Czy nawias klamrowy otwierający znajduje się w tej samej linii, co nazwa metody, czy w następnej?
 
 `control_brace_line`:
-Does the opening brace for a control structure go on the `same` line, or on the `next` line?
+Czy nawias klamrowy otwierający znajduje się w tej samej linii, co słowo kluczowe instrukcji 
+sterującej, czy w następnej?
 
 `control_space_after`:
-Is there a space after the control structure keyword?
+Czy po słowie kluczowym określającym instrukcję sterującą, znajduje się spacja?
 
 `always_use_control_braces`:
-Do control structures always use braces?
+Czy instrukcje sterujące używają zawsze nawiasów klamrowych?
 
 `else_elseif_line`:
-When using `else` or `elseif`, does it go on the `same` line as the previous closing brace, or does it go on the `next` line?
+Czy podczas używania słów kluczowych `else` lub `elseif` znajdują się one w tej samej linii co wcześniejszy nawias klamrowy zamykający, czy w następnej?
 
 `case_break_indent_from_switch`:
-How many times are `case` and `break` indented from an opening `switch` statement?
+Jak wiele wcięć w instrukcji `switch` posiadają `case` i `break`?
 
 `function_space_after`:
-Do function calls have a space after the function name and before the opening parenthesis?
+Czy wywołania funkcji posiadają znak spacji po nazwie funkcji a przed nawiasem otwierającym?
 
 `closing_php_tag_required`:
-In files containing only PHP, is the closing `?>` tag required?
+Czy tag zamykający `?>` jest wymagany w plikach zawierających tylko PHP?
 
 `line_endings`:
-What type of line ending is used?
+Jaki jest kod końca linii?
 
 `static_or_visibility_first`:
-When declaring a method, does `static` come first, or does the visibility come first?
+Co jest pierwsze podczas deklarowania metody – widoczność czy słowo kluczowe `static`?
 
 `control_space_parens`:
-In a control structure expression, is there a space after the opening parenthesis and a space before the closing parenthesis? `yes` = `if ( $expr )`, `no` = `if ($expr)`.
+Czy w instrukcjach sterujących znajdują się spacje po nawiasie otwierającym i przed 
+nawiasem zamykającym? `yes` = `if ( $expr )`, `no` = `if ($expr)`.
 
 `blank_line_after_php`:
-Is there a blank line after the opening PHP tag?
+Czy po otwierającym tagu PHP istnieje pusta linia?
 
 `class_method_control_brace`:
-A summary of what line the opening braces go on for classes, methods, and control structures.
+Podsumowanie - w którym miejscu znajduje się otwierający nawias klamrowy dla metod, 
+klas oraz instrukcji sterujących.
 
-### A.3. Survey Results
+### A.3. Wyniki ankiety
 
     indent_type:
         tab: 7
