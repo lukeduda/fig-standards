@@ -3,7 +3,7 @@ Przewodnik po standardach formatowania
 
 Poniższy przewodnik rozszerza i rozwija PSR-1 - podstawowe standardy programowania.
 
-Dokument powstał w celu zredukowania zaburzeń procesów poznawczych ("co autor miał na myśli?") podczas
+Dokument powstał w celu zredukowania zaburzeń procesów poznawczych (pol. "co autor miał na myśli?") podczas
 przeglądania kodu php pochodzącego od różnych autorów. W ramach poniższej pracy stworzono listę zasad i
 oczekiwań dotyczących formatowania kodu PHP.
 
@@ -91,7 +91,7 @@ class Foo extends Bar implements FooInterface
 
 Kod php MUSI stosować się do zasad podstawowych standardów programowania [PSR-1].
 
-### 2.2 Files
+### 2.2 Pliki
 
 Wszystkie pliki php MUSZĄ używać unixowego kodu końca linii - LF (linefeed).
 
@@ -141,7 +141,7 @@ Stałe php `true`, `false` i `null` MUSZĄ także być zapisywane małymi litera
 Kiedy używamy deklaracji `namespace`, MUSI występować po niej jedna pusta linia.
 
 Kiedy używamy deklaracji `use`, wszystkie deklaracje `use`
-MUSZĄ występować po deklaracji `namespace`.
+MUSZĄ występować poniżej deklaracji `namespace`.
 
 Znak specjalny `use` MUSI być używany dla każdej deklaracji z osobna.
 
