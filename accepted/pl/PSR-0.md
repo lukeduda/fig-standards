@@ -42,7 +42,7 @@ będzie ona działać poprawnie już dla projektów opartych o wersję PHP 5.3.
 Przykładowa implementacja
 ----------------------
 
-Poniżej przedstawiono przykładową funkcję do demonstracji jak powinna wyglądać implementacja autloadingu na podstawie powyższych standardów.
+Poniżej przedstawiono przykładową funkcję aby zademonstrować jak powinna wyglądać implementacja autloadingu na podstawie powyższych standardów.
 
 ```php
 <?php

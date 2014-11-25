@@ -1,7 +1,7 @@
 Podstawowe standardy formatowania
 =====================
 
-Poniższa sekcja standardów zawiera reguły, które powinny zostać rozpatrzone 
+Poniższa sekcja standardów zawiera reguły, które są uznawane za konieczne 
 dla zachowania wysokiego poziomu interoperacyjności kodu PHP pochodzącego z różnych źródeł.
 
 Następujące słowa "MUSI", "NIE WOLNO", "WYMAGANE", "POWINNO", "NIE POWINNO", "REKOMENDWANE", "MOŻE" oraz 
@@ -163,7 +163,7 @@ Powyższy przewodnik celowo nie rekomenduje żadnych standardów dotyczących na
 klas (np. `$camelCase`, `$UpperCamelCase` czy `$znak_podkreslenia`).
 
 Jakakolwiek forma nazewnictwa właściwości jest używana – POWINNA być stosowana 
-konsekwentnie w rozsądnym obszarze kodu. Obszar ten może zostać określony na poziomie 
+konsekwentnie dla danego obszaru kodu. Obszar ten może zostać określony na poziomie 
 vendora, paczki, klasy czy metody.
 
 ### 4.3. Metody

@@ -53,7 +53,7 @@ podstawie wartości z tablicy kontekstu.
   klamrowymi a nazwą zmiennej zastępczej NIE WOLNO umieszczać znaków spacji.
 
   Nazwy zmiennych zastępczych POWINNY być utworzone tylko ze znaków `A-Z`, `a-z`, `0-9`, 
-  znaku podkreślenia `_`, oraz kropki `.`. Użycie innych znaków jest zarezerwowane 
+  znaku podkreślenia `_` oraz kropki `.`. Użycie innych znaków jest zarezerwowane 
   dla przyszłych modyfikacji.
 
   Implementatorzy MOGĄ używać zmiennych zastępczych do implementacji różnych 
@@ -70,7 +70,7 @@ podstawie wartości z tablicy kontekstu.
    */
   function interpolate($message, array $context = array())
   {
-	  // zbuduj tablicę zastępującą z nawiasmi klamrowymi wokół kluczy tablicy z danymi kontekstu
+	  // zbuduj tablicę translacyjną z nawiasami klamrowymi wokół kluczy tablicy z danymi kontekstu
       $replace = array();
       foreach ($context as $key => $val) {
           $replace['{' . $key . '}'] = $val;
@@ -101,14 +101,14 @@ typów raportowania błędów: error, warning lub notice.
 
 - Jeśli obiekt klasy `Exception` jest przekazany w danych kontekstowych, 
 MUSI on znaleźć się w kluczu `'exception'` tablicy. Logowanie wyjątków jest 
-powszechnym wzorcem i pozwala implemetatorowi wyeksportować stack trace z wyjątku, j
-eśli jego funkcjonalność wspiera takie operacje. Implementator MUSI ciągle 
+powszechnym wzorcem i pozwala implemetatorowi wyeksportować stack trace z wyjątku, 
+jeśli jego funkcjonalność wspiera takie operacje. Implementator MUSI ciągle 
 weryfikować to, że klucz `'exception'` jest faktycznie obiektem klasy Exception 
 przed użyciem go, ponieważ klucz ten MOŻE przechowywać cokolwiek.
 
 ### 1.4 Pomocnicze klasy i interfejsy
 
-- Klasa `Psr\Log\AbstractLogger` pozwala zaimplementować `LoggerInterface` bardzo prosto poprzez rozszerzenie jej i implementację standardowej metody `log`. Pozostałe osiem metod przekazuje 
+- Klasa `Psr\Log\AbstractLogger` pozwala zaimplementować `LoggerInterface` bardzo prosto poprzez rozszerzenie jej i implementację standardowej metody `log`. Pozostałych osiem metod przekazuje 
 komunikaty i tablicę z danymi kontekstowymi do wspomnianej metody `log`.
 
 - Podobnie jak w powyższym przypadku, użycie traita `Psr\Log\LoggerTrait` wymaga jedynie 
