@@ -13,13 +13,13 @@ Wymagania
 * W pełni poprawna przestrzeń nazw (namespace) i klasa muszą posiadać następującą strukturę 
 `\<Nazwa Vendora>\(<Namespace>\)*<Nazwa klasy>`
 * Każdy namespace musi posiadać namespace bazowy ("Nazwa Vendora").
-* Każdy namespace może posiadać tyle namespace’ów dziedziczących ile chce.
-* Każdy separator między namespace’ami jest zamieniany na stałą `DIRECTORY_SEPARATOR` 
+* Każdy namespace może posiadać tyle namespace'ów dziedziczących ile chce.
+* Każdy separator między namespace'ami jest zamieniany na stałą `DIRECTORY_SEPARATOR` 
 podczas ładowania z systemu plików.
 * Każdy znak `_` w nazwie klasy jest konwertowany do wartości stałej `DIRECTORY_SEPARATOR`. 
-Znak `_` nie ma żadnego specjalnego znaczenia w nazwie namespace’a.
-* W pełni poprawny plik namespace’a i klasy musi kończyć się rozszerzeniem `.php` podcza ładowania z systemu plików.
-* Wielkość znaków (duże/małe litery) w nazwie vendora, namespace’a czy klasy nie odgrywa żadnego znaczenia.
+Znak `_` nie ma żadnego specjalnego znaczenia w nazwie namespace'a.
+* W pełni poprawny plik namespace'a i klasy musi kończyć się rozszerzeniem `.php` podcza ładowania z systemu plików.
+* Wielkość znaków (duże/małe litery) w nazwie vendora, namespace'a czy klasy nie odgrywa żadnego znaczenia.
 
 Przykłady
 --------
@@ -29,7 +29,7 @@ Przykłady
 * `\Zend\Acl` => `/path/to/project/lib/vendor/Zend/Acl.php`
 * `\Zend\Mail\Message` => `/path/to/project/lib/vendor/Zend/Mail/Message.php`
 
-Znaki podkreślenia w nazwach namespace’ów i klas
+Znaki podkreślenia w nazwach namespace'ów i klas
 -----------------------------------------
 
 * `\namespace\package\Class_Name` => `/path/to/project/lib/vendor/namespace/package/Class/Name.php`

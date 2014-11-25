@@ -14,7 +14,7 @@ logi do scentralizowanego dziennika aplikacji.
 Następujące słowa "MUSI", "NIE WOLNO", "WYMAGANE", "POWINNO", "NIE POWINNO", 
 "REKOMENDWANE", "MOŻE" oraz "OPCJONALNE" będą interpretowane tak jak opisano to w [RFC 2119][].
 
-Wyrażenie implementator w poniższym dokumencie powinno być interpretowane, jako osoba implementująca interfejs `LoggerInterface` w bibliotece zorientowanej na obsługę dzienników lub frameworku. Użytkownikami poniżej nazwano osoby korzystające z dzienników.
+Wyrażenie `implementator` w poniższym dokumencie powinno być interpretowane, jako osoba implementująca interfejs `LoggerInterface` w bibliotece zorientowanej na obsługę dzienników lub frameworku. `Użytkownikami` poniżej nazwano osoby korzystające z dzienników.
 
 [RFC 2119]: http://tools.ietf.org/html/rfc2119
 
