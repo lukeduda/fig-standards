@@ -1,4 +1,4 @@
-Podstawowe standardy programowania
+Podstawowe standardy formatowania
 =====================
 
 Poniższa sekcja standardów zawiera reguły, które powinny zostać rozpatrzone 
@@ -27,10 +27,10 @@ Następujące słowa "MUSI", "NIE WOLNO", "WYMAGANE", "POWINNO", "NIE POWINNO", 
 
 - Nazwy klas MUSZĄ być zapisywane w notacji `UpperCamelCase`.
 
-- Stałe w klasach muszą być deklarowane wielkimi literami, ze znakiem podkreślenia 
+- Stałe w klasach MUSZĄ być deklarowane wielkimi literami, ze znakiem podkreślenia 
  (`_`) używanym jako separator.
 
-- Nazwy metod muszą być tworzone w notacji `camelCase`.
+- Nazwy metod MUSZĄ być tworzone w notacji `camelCase`.
 
 
 2. Pliki
@@ -54,7 +54,7 @@ zmiennej globalnej.
 Pojedynczy plik POWINIEN zawierać w sobie deklaracje "obiektów" języka PHP (klasy, funkcje, stałe itp.) 
 bez jakichkolwiek skutków ubocznych lub wykonywać logikę programu, która wiąże się z efektami ubocznymi. 
 
-Plik nie powinien wykonywać tych dwóch rzeczy na raz. Efekty uboczne w php to m.in. generowanie wyjścia, 
+Plik NIE POWINIEN wykonywać tych dwóch rzeczy na raz. Efekty uboczne w php to m.in. generowanie wyjścia, 
 używanie `require` lub `include`, podłączenie do zewnętrznej usługi, modyfikacja parametrów ini, 
 rzucanie błędów lub wyjątków, modyfikacja globalnych lub statycznych zmiennych, 
 czytanie lub zapis z/do pliku itd.
@@ -103,7 +103,7 @@ if (! function_exists('bar')) {
 3. Przestrzenie nazw oraz nazwy klas
 ----------------------------
 
-Standardy tworzenia namespace’ów oraz klas MUSZĄ podążać za PSRami dotyczącymi autoloadingu: [[PSR-0], [PSR-4]].
+Standardy tworzenia namespace'ów oraz klas MUSZĄ podążać za PSRami dotyczącymi autoloadingu: [[PSR-0], [PSR-4]].
 
 Deklaracji pojedynczej klasy odpowiada jeden plik, a jej przestrzeń nazw znajduje się na 
 najniższym poziomie, gdzie na najwyższym poziomie znajduje się nazwa vendora.
@@ -125,7 +125,7 @@ class Foo
 ```
 
 Kod napisany dla wersji PHP 5.2.x oraz niższych, 
-POWINIEN używać pseudo-namespace’owych konwencji prefiksów (np. `Vendor_` ) dla nazw klas.
+POWINIEN używać pseudo-namespace'owych konwencji prefiksów (np. `Vendor_` ) dla nazw klas.
 
 ```php
 <?php

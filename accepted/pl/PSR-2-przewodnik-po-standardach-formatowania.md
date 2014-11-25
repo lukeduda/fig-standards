@@ -1,7 +1,7 @@
 Przewodnik po standardach formatowania
 ==================
 
-Poniższy przewodnik rozszerza i rozwija PSR-1 - podstawowe standardy programowania.
+Poniższy przewodnik rozszerza i rozwija PSR-1 - podstawowe standardy formatowania.
 
 Dokument powstał w celu zredukowania zaburzeń procesów poznawczych (pol. "co autor miał na myśli?") podczas
 przeglądania kodu php pochodzącego od różnych autorów. W ramach poniższej pracy stworzono listę zasad i
@@ -12,8 +12,8 @@ członków PHP-FIG.  Kiedy różni autorzy współpracują w ramach kilku projek
 wytycznych używany we wszystkich tych projektach jest bardzo pomocny. Dlatego też, główną korzyścią tego
 poradnika nie są zasady same w sobie, lecz dzielenie się nimi.
 
-Następujące słowa "MUSI", "NIE WOLNO", "WYMAGANE", "POWINNO", "NIE POWINNO", "REKOMENDWANE", "MOŻE" oraz
-"OPCJONALNE" powinny być interpretowane tak jak opisano to w [RFC 2119].
+Następujące słowa "MUSI", "NIE WOLNO", "WYMAGANE", "POWINNO", "NIE POWINNO", 
+"REKOMENDWANE", "MOŻE" oraz "OPCJONALNE" będą interpretowane tak jak opisano to w [RFC 2119][].
 
 [RFC 2119]: http://www.ietf.org/rfc/rfc2119.txt
 [PSR-0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
@@ -87,9 +87,9 @@ class Foo extends Bar implements FooInterface
 2. Zasady ogólne
 ----------
 
-### 2.1 Podstawowe standardy programowania
+### 2.1 Podstawowe standardy formatowania
 
-Kod php MUSI stosować się do zasad podstawowych standardów programowania [PSR-1].
+Kod php MUSI stosować się do zasad podstawowych standardów formatowania [PSR-1].
 
 ### 2.2 Pliki
 
@@ -122,7 +122,7 @@ NIE WOLNO używać więcej niż jednego wyrażenia na linię.
 Kod php MUSI używać 4 spacji jako wcięcie, NIE WOLNO używać znaków tabulacji do wcięć.
 
 > Notabene: Używanie tylko spacji oraz nie mieszanie tego podejścia ze znakami tabulacji, pomaga uniknąć
-> problemów z porównywaniem plików, patche’ami, historią oraz adnotacjami. Używanie spacji pozwala w łatwy 
+> problemów z porównywaniem plików, patche'ami, historią oraz adnotacjami. Używanie spacji pozwala w łatwy 
 > sposób dodawać niewielkie wcięcia dla dodatkowego wyrównania w linii.
 
 ### 2.5. Znaki specjalne oraz True/False/Null
@@ -398,8 +398,8 @@ słowa kluczowe instrukcji sterujących składały się z jednej frazy.
 Instrukcja `switch` wygląda jak w przykładzie poniżej. Zapamiętaj pozycję nawiasów, 
 spacji oraz nawiasów klamrowych. Wyrażenie `case` MUSI posiadać jedno wcięcie w 
 odniesieniu do instrukcji `switch`. Słowo kluczowe `break` (lub inne słowo kluczowe 
-kończące działanie switch’a) MUSI posiadać wcięcie na tym samym poziomie co ciało 
-wyrażenia `case`. Jeśli intencją programisty jest wywołanie kolejnych case’ów po nie 
+kończące działanie switch'a) MUSI posiadać wcięcie na tym samym poziomie co ciało 
+wyrażenia `case`. Jeśli intencją programisty jest wywołanie kolejnych case'ów po nie 
 pustym wyrażeniu `case` – MUSI zostać dodany komentarz taki jak np. `// no break`. 
 
 ```php
