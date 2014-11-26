@@ -13,7 +13,7 @@ Wymagania
 * W pełni poprawna przestrzeń nazw (namespace) i klasa muszą posiadać następującą strukturę 
 `\<Nazwa Vendora>\(<Namespace>\)*<Nazwa klasy>`
 * Każdy namespace musi posiadać namespace bazowy ("Nazwa Vendora").
-* Każdy namespace może posiadać tyle namespace'ów dziedziczących ile chce.
+* Każdy namespace może posiadać tyle podnamespace'ów ile chce.
 * Każdy separator między namespace'ami jest zamieniany na stałą `DIRECTORY_SEPARATOR` 
 podczas ładowania z systemu plików.
 * Każdy znak `_` w nazwie klasy jest konwertowany do wartości stałej `DIRECTORY_SEPARATOR`. 
