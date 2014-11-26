@@ -8,7 +8,7 @@ to w [RFC 2119](http://tools.ietf.org/html/rfc2119).
 ## 1. Podsumowanie
 
 Poniższy PSR opisuje specyfikację [autoloadingu][] klas na podstawie 
-ścieżek plików. Autloading jest w pełni interoperacyjny i może być użyty 
+ścieżek plików. Autoloading jest w pełni interoperacyjny i może być użyty 
 jako dodatek do wszelkich innych specyfikacji autoloadingu, włączając [PSR-0][]. 
 Ten PSR opisuje także to gdzie umieszczać pliki, które będę automatycznie 
 ładowane stosownie do specyfikacji.
@@ -24,7 +24,7 @@ traitów oraz innych podobnych struktur.
         \<NazwaNamespacea>(\<NazwaPodNamespacea>)*\<NazwaKlasy>
 
     1. W pełni poprawna nazwa klasy MUSI posiadać namespace bazowy, 
-	zwany także "namespace'm vendora"
+	zwany także "namespace'm vendora".
 
     2. W pełni poprawna nazwa klasy MOŻE posiadać jeden lub wiele podnamespace'ów.
 
@@ -40,7 +40,7 @@ traitów oraz innych podobnych struktur.
 
 3. Kiedy wczytujemy plik, który odpowiada w pełni poprawnej nazwie klasy...
 
-    1. Sąsiadujące ze sobą nazwy namespace'a bazowego oraz podnamesace'ów 
+    1. Sąsiadujące ze sobą nazwy namespace'a bazowego oraz podnamespace'ów 
 	(bez uwzględnienia początkowego separatora namespace'a bazowego) w pełni poprawnej 
 	nazwie klasy zwane są "prefiksem przestrzeni nazw" i odpowiadają przynajmniej jednemu 
 	"katalogowi bazowemu".
