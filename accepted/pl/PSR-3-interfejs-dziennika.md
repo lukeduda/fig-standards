@@ -40,16 +40,16 @@ niestandardowego poziomu bez wiedzy o tym czy na pewno aktualna implementacja ws
 ### 1.2 Komunikaty
 
 - Każda metoda akceptuje ciąg znaków lub obiekt z metodą `__toString()` jako komunikat. 
-Implementator MOŻE posiadać specjalną obsługę dla przekazanych obiektów. Jeśli nie jest to 
-przypadek, implementator MUSI skonwertować rzeczone obiekty do postaci ciągu znaków.
+Implementator MOŻE posiadać specjalną obsługę dla przekazanych obiektów. Jeśli nie jest to spełnione, 
+implementator MUSI wcześniej skonwertować obiekt do postaci ciągu znaków.
 
 - Komunikat MOŻE zawierać zmienne zastępcze, które implementator MOŻE podmienić na 
 podstawie wartości z tablicy kontekstu.
 
   Nazwy zmiennych zastępczych MUSZĄ odpowiadać kluczom w tablicy kontekstu.
 
-  Nazwy zmiennych zastępczych MUSZĄ  być ograniczone do pojedynczego nawiasu klamrowego 
-  otwierającego `{` i pojedynczego nawiasu klamrowego zamykającego `}`. Między nawiasami 
+  Nazwy zmiennych zastępczych MUSZĄ być otoczone pojedynczymi nawiasami klamrowymi,
+  otwierającym `{` i zamykającym `}`. Między nawiasami 
   klamrowymi a nazwą zmiennej zastępczej NIE WOLNO umieszczać znaków spacji.
 
   Nazwy zmiennych zastępczych POWINNY być utworzone tylko ze znaków `A-Z`, `a-z`, `0-9`, 
@@ -102,8 +102,8 @@ typów raportowania błędów: error, warning lub notice.
 - Jeśli obiekt klasy `Exception` jest przekazany w danych kontekstowych, 
 MUSI on znaleźć się w kluczu `'exception'` tablicy. Logowanie wyjątków jest 
 powszechnym wzorcem i pozwala implemetatorowi wyeksportować stack trace z wyjątku, 
-jeśli jego funkcjonalność wspiera takie operacje. Implementator MUSI ciągle 
-weryfikować to, że klucz `'exception'` jest faktycznie obiektem klasy Exception 
+jeśli jego funkcjonalność wspiera takie operacje. Implementator MUSI jednak zweryfikować czy 
+klucz 'exception'` jest faktycznie obiektem klasy Exception 
 przed użyciem go, ponieważ klucz ten MOŻE przechowywać cokolwiek.
 
 ### 1.4 Pomocnicze klasy i interfejsy
